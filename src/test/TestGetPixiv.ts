@@ -19,11 +19,11 @@ export async function getPixivJson(): Promise<IPixivJson> {
     "Accept": "*/*",
     "User-Agent": "Thunder Client (https://www.thunderclient.com)"
   };
-  const proxyAgent = HttpsProxyAgent('http://127.0.0.1:10900');
+  // const proxyAgent = HttpsProxyAgent('http://127.0.0.1:10900');
   let response = await fetch(url, {
     method: "GET",
     headers: headersList,
-    agent: proxyAgent
+    // agent: proxyAgent
   });
 
   let data = await response.text();
@@ -40,11 +40,11 @@ export async function getPixivPicJson(url: string): Promise<IPixivPicJson> {
     "Accept": "*/*",
     "User-Agent": "Thunder Client (https://www.thunderclient.com)"
   };
-  const proxyAgent = HttpsProxyAgent('http://127.0.0.1:10900');
+  // const proxyAgent = HttpsProxyAgent('http://127.0.0.1:10900');
   let response = await fetch(url, {
     method: "GET",
     headers: headersList,
-    agent: proxyAgent
+    // agent: proxyAgent
   });
 
   let data = await response.text();
